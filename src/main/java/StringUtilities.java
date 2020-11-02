@@ -5,7 +5,9 @@ public class StringUtilities {
      * @return `input`
      */
     public String returnInput(String input) {
-        return null;
+        String expected = input;
+
+        return expected;
     }
 
     /**
@@ -14,7 +16,9 @@ public class StringUtilities {
      * @return the concatenation of `baseValue` and `valueToBeAdded`
      */
     public String concatenate(String baseValue, String valueToBeAdded) {
-        return null;
+        String expected = baseValue + valueToBeAdded;
+
+        return expected;
     }
 
     /**
@@ -22,7 +26,12 @@ public class StringUtilities {
      * @return identical string with characters in opposite order
      */
     public String reverse(String valueToBeReversed) {
-        return null;
+
+        StringBuilder reversal = new StringBuilder(valueToBeReversed);
+        StringBuilder revString = reversal.reverse();
+        String expected = revString.toString();
+
+        return expected;
     }
 
     /**
@@ -30,7 +39,12 @@ public class StringUtilities {
      * @return middle character of `word`
      */
     public Character getMiddleCharacter(String word) {
-        return null;
+
+        Integer wordMiddle = word.length() / 2;
+
+        Character expected = word.charAt(wordMiddle);
+
+        return expected;
     }
 
     /**
@@ -39,7 +53,11 @@ public class StringUtilities {
      * @return `value` with char of value `charToRemove` removed
      */
     public String removeCharacter(String value, Character charToRemove) {
-        return null;
+
+        String remove = charToRemove.toString();
+        String expected = value.replaceAll(remove, "");
+
+        return expected;
     }
 
     /**
@@ -47,6 +65,12 @@ public class StringUtilities {
      * @return last `word` in sentence
      */
     public String getLastWord(String sentence) {
-        return null;
+
+        String[] sentArr = sentence.split(" ");
+        String expected = sentArr[sentArr.length - 1];
+
+
+
+        return expected;
     }
 }

@@ -9,7 +9,9 @@ public class MathUtilities{
    * @return the sum of the two numbers
    */
   public Integer add(Integer baseValue, Integer valueToAdd){
-      return null;
+      Integer expected = baseValue + valueToAdd;
+
+      return expected;
   }
 
   /**
@@ -19,7 +21,9 @@ public class MathUtilities{
    * @return the sum of the two numbers
    */
   public Double add(Double baseValue, Double valueToAdd){
-      return null;
+      Double expected = baseValue + valueToAdd;
+
+      return expected;
   }
 
   /**
@@ -28,7 +32,10 @@ public class MathUtilities{
    * @return the half of the number in double
    */
   public Double half(Integer number) {
-      return null;
+
+      Double expected = new Double(number);
+
+      return expected / 2;
   }
 
   /**
@@ -37,7 +44,13 @@ public class MathUtilities{
    * @return true if the number is odd, false if it is even
    */
   public Boolean isOdd(Integer number){
-      return null;
+      Boolean expected;
+      if (number % 2 == 0) {
+          expected = false;
+      } else {
+          expected = true;
+      }
+      return expected;
   }
 
 
@@ -47,7 +60,9 @@ public class MathUtilities{
    * @return the result of the number multiply by itself
    */
   public Integer square(Integer number) {
-      return null;
+      Integer expected = number * number;
+
+      return expected;
   }
 
 }

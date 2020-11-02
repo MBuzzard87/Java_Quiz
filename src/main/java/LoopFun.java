@@ -1,7 +1,8 @@
- 
+
 
 public class LoopFun
 {
+
 
       /**
        * Given a number, return the factorial of that number.
@@ -9,8 +10,14 @@ public class LoopFun
        * @param number
        * @return the factorial of the number
        */
+
+
       public Integer factorial(Integer number){
-          return null;
+          Integer expected = 1;
+          for(int i = 1; i <= number ; i++) {
+              expected = expected * i;
+          }
+          return expected;
       }
 
       /**
@@ -21,7 +28,16 @@ public class LoopFun
        * @return Upper case string of the first letter of each word
        */
       public String acronym(String phrase) {
-          return null;
+          String expected = "";
+
+          String[] acronym = phrase.split(" ");
+
+              for (int j = 0; j < acronym.length; j++) {
+                  Character acroChar = acronym[j].charAt(0);
+                  expected += acroChar.toString().toUpperCase();
+              }
+
+          return expected;
       }
 
       /**
@@ -36,7 +52,45 @@ public class LoopFun
        * @param word
        * @return the encrypted string by shifting each character by three character
        */
+
+
+      /*
+
+
+      // Keeps returning [Ljava.lang.String;
+      // Trying to figure out how to display as a string, not the Array.
+
+
       public String encrypt(String word) {
-          return null;
+
+
+          String expected = ";";
+          String alphabet = "abcdefghijklmnopqrstuvwxyz";
+
+          for (int i = 0; i < word.length(); i++) {
+
+              Integer alphaInd = alphabet.indexOf(word.charAt(i));
+              String[] expectArr = new String[word.length()];
+              expected += expectArr.toString();
+
+              if (word.charAt(i) == alphabet.charAt(alphaInd)) {
+                   if (alphaInd > 22) {
+                       Integer alphaSub = alphaInd - 23;
+                       expectArr[i] = alphabet.substring(alphaSub, alphaSub + 1);
+                   } else {
+                       Integer alphaAdd = alphaInd + 3;
+                       expectArr[i] = alphabet.substring(alphaAdd, alphaAdd + 1);
+                   }
+
+              }
+
+
+
+          }   return expected;
+
+
       }
+
+
+       */
 }
