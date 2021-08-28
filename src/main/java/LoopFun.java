@@ -1,4 +1,4 @@
-
+import java.util.Arrays;
 
 public class LoopFun
 {
@@ -13,11 +13,11 @@ public class LoopFun
 
 
       public Integer factorial(Integer number){
-          Integer expected = 1;
+          Integer num = 1;
           for(int i = 1; i <= number ; i++) {
-              expected = expected * i;
+              num *= i;
           }
-          return expected;
+          return num;
       }
 
       /**
@@ -28,16 +28,15 @@ public class LoopFun
        * @return Upper case string of the first letter of each word
        */
       public String acronym(String phrase) {
-          String expected = "";
-
+          StringBuilder num = new StringBuilder();
           String[] acronym = phrase.split(" ");
 
               for (int j = 0; j < acronym.length; j++) {
                   Character acroChar = acronym[j].charAt(0);
-                  expected += acroChar.toString().toUpperCase();
+                  num.append(acroChar.toString().toUpperCase());
               }
 
-          return expected;
+          return num.toString();
       }
 
       /**
@@ -53,44 +52,22 @@ public class LoopFun
        * @return the encrypted string by shifting each character by three character
        */
 
-
-      /*
-
-
-      // Keeps returning [Ljava.lang.String;
-      // Trying to figure out how to display as a string, not the Array.
-
-
       public String encrypt(String word) {
-
-
-          String expected = ";";
-          String alphabet = "abcdefghijklmnopqrstuvwxyz";
+          StringBuilder sb = new StringBuilder();
 
           for (int i = 0; i < word.length(); i++) {
-
-              Integer alphaInd = alphabet.indexOf(word.charAt(i));
-              String[] expectArr = new String[word.length()];
-              expected += expectArr.toString();
-
-              if (word.charAt(i) == alphabet.charAt(alphaInd)) {
-                   if (alphaInd > 22) {
-                       Integer alphaSub = alphaInd - 23;
-                       expectArr[i] = alphabet.substring(alphaSub, alphaSub + 1);
-                   } else {
-                       Integer alphaAdd = alphaInd + 3;
-                       expectArr[i] = alphabet.substring(alphaAdd, alphaAdd + 1);
-                   }
-
+              char c = word.charAt(i);
+              if(c + 3 > 122) {
+                  c = (char) (c - 23);
+                  sb.append(c);
+              } else {
+                  c = (char) (c + 3);
+                  sb.append(c);
               }
+          }
 
-
-
-          }   return expected;
+          return sb.toString();
 
 
       }
-
-
-       */
 }

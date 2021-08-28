@@ -5,9 +5,7 @@ public class StringUtilities {
      * @return `input`
      */
     public String returnInput(String input) {
-        String expected = input;
-
-        return expected;
+        return input;
     }
 
     /**
@@ -16,9 +14,7 @@ public class StringUtilities {
      * @return the concatenation of `baseValue` and `valueToBeAdded`
      */
     public String concatenate(String baseValue, String valueToBeAdded) {
-        String expected = baseValue + valueToBeAdded;
-
-        return expected;
+        return baseValue + valueToBeAdded;
     }
 
     /**
@@ -27,11 +23,8 @@ public class StringUtilities {
      */
     public String reverse(String valueToBeReversed) {
 
-        StringBuilder reversal = new StringBuilder(valueToBeReversed);
-        StringBuilder revString = reversal.reverse();
-        String expected = revString.toString();
-
-        return expected;
+        StringBuilder sb = new StringBuilder(valueToBeReversed);
+        return sb.reverse().toString();
     }
 
     /**
@@ -39,12 +32,7 @@ public class StringUtilities {
      * @return middle character of `word`
      */
     public Character getMiddleCharacter(String word) {
-
-        Integer wordMiddle = word.length() / 2;
-
-        Character expected = word.charAt(wordMiddle);
-
-        return expected;
+        return word.charAt(word.length() / 2);
     }
 
     /**
@@ -53,11 +41,7 @@ public class StringUtilities {
      * @return `value` with char of value `charToRemove` removed
      */
     public String removeCharacter(String value, Character charToRemove) {
-
-        String remove = charToRemove.toString();
-        String expected = value.replaceAll(remove, "");
-
-        return expected;
+        return value.replaceAll(charToRemove.toString(), "");
     }
 
     /**
@@ -65,12 +49,8 @@ public class StringUtilities {
      * @return last `word` in sentence
      */
     public String getLastWord(String sentence) {
-
         String[] sentArr = sentence.split(" ");
-        String expected = sentArr[sentArr.length - 1];
 
-
-
-        return expected;
+        return sentArr[sentArr.length - 1];
     }
 }
